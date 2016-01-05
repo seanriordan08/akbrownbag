@@ -89,6 +89,15 @@ $(document).ready(function(){
     $("#bubble_title").fadeOut(100);
   });
 
+  $('.download_menu').click(function() {
+    var a = $("<a>")
+      .attr("href", "Brown_Bag_Menu_Feb_2015.pdf")
+      .attr("download", "BBSC_Menu.pdf")
+      .appendTo("body");
+    a[0].click();
+    a.remove();
+  });
+
   $('.download_orderForm').click(function() {
     var a = $("<a>")
       .attr("href", "Brochure_Catering.pdf")
