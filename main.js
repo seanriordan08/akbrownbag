@@ -56,7 +56,7 @@ $(document).ready(function(){
     hours.hide();
     map.hide();
     order.hide();
-    cater.hide();
+    //cater.hide();
 
     if (selection == "About"){
       about.fadeIn();
@@ -72,13 +72,30 @@ $(document).ready(function(){
       map.fadeIn();
       initMap();
     }
-    else if (selection == "Order"){
+    else if (selection == "Order/Cater"){
       order.fadeIn();
     }
-    else if (selection == "Cater"){
-      cater.fadeIn();
-    }
+    //else if (selection == "Cater"){
+    //  cater.fadeIn();
+    //}
 
+  });
+
+  $(".image_bubble_holder img").mouseenter(function(){
+    $("#bubble_title").hide().text($(this).attr("alt")).fadeIn(100);
+  });
+
+  $(".image_bubble_holder img").mouseleave(function(){
+    $("#bubble_title").fadeOut(100);
+  });
+
+  $('.download_orderForm').click(function() {
+    var a = $("<a>")
+      .attr("href", "Brochure_Catering.pdf")
+      .attr("download", "BBSC_Order_Form.pdf")
+      .appendTo("body");
+    a[0].click();
+    a.remove();
   });
 
   $('#fb_link').on("click", function(){
@@ -125,12 +142,12 @@ function getNow(){
 function checkHours(checkDate){
   var day_now = moment(checkDate).format('dddd'); // "Friday"
   var hours_now = moment(checkDate).format('HH'); // 24 hr format
-  var regular_hours = ((7 < hours_now) && (hours_now < 18 ));
+  var regular_hours = ((2 < hours_now) && (hours_now > 10 ));
 
-  if ((day_now == "Saturday") && (10 < hours_now) && (hours_now < 18 )){
+  if ((day_now == "Saturday") && (2 < hours_now) && (hours_now < 11 )){
     return true;
   }
-  else if ((day_now == "Sunday") && (10 < hours_now) && (hours_now < 15 )){
+  else if ((day_now == "Sunday") && (2 < hours_now) && (hours_now < 11 )){
     return true;
   }
   else if ((day_now != "Saturday") && (day_now != "Sunday")){
