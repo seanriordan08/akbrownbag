@@ -44,7 +44,7 @@ function initMap() {
     '<div id="bodyContent">'+
     '<p>The <b>Brown Bag Sandwich Co.</b>, also referred to as <b>BBSC</b>, outgrew its shell '+
     'and found a more suitable place to call it\'s digs. '+
-    'We\'re back in business, and exited to exceed the high standards of quality '+
+    'We\'re back in business, and excited to exceed the high standards of quality '+
     'and convenience our customers have come to expect and <3'+
     '</div>'+
     '</div>';
