@@ -140,26 +140,26 @@ function getNow(){
   var green_open = "<span style='color:#2c800d'>we're totally open!</span>";
   var red_closed = "<span style='color:#a00000'>closed</span>";
 
-  if (checkHours(newDate) == true)
-  {
-    $('.hours span').html("It\'s " + now + "<br>" + green_open + "</br>");
-  } else {
-    $('.hours span').html("It\'s " + now + "<br> we are " + red_closed + ". For now.");
-  }
+  //if (checkHours(newDate) == true)
+  //{
+  //  $('.hours span').html("It\'s " + now + "<br>" + green_open + "</br>");
+  //} else {
+  //  $('.hours span').html("It\'s " + now + "<br> we are " + red_closed + ". For now.");
+  //}
 }
 
-function checkHours(checkDate){
-  var day_now = moment(checkDate).format('dddd'); // "Friday"
-  var hours_now = moment(checkDate).format('HH'); // 24 hr format
-  var regular_hours = ((2 < hours_now) && (hours_now > 10 ));
-
-  if ((day_now == "Saturday") && (2 < hours_now) && (hours_now < 11 )){
-    return true;
-  }
-  else if ((day_now == "Sunday") && (2 < hours_now) && (hours_now < 11 )){
-    return true;
-  }
-  else if ((day_now != "Saturday") && (day_now != "Sunday")){
-    return regular_hours;
-  }
-}
+//function checkHours(checkDate){
+//  var day_now = moment(checkDate).format('dddd'); // "Friday"
+//  var hours_now = moment(checkDate).format('HH'); // 24 hr format
+//  var regular_hours = ((2 < hours_now) && (hours_now > 10 ));
+//
+//  if ((day_now == "Saturday") && (2 < hours_now) && (hours_now < 11 )){
+//    return true;
+//  }
+//  else if ((day_now == "Sunday") && (2 < hours_now) && (hours_now < 11 )){
+//    return true;
+//  }
+//  else if ((day_now != "Saturday") && (day_now != "Sunday")){
+//    return regular_hours;
+//  }
+//}
