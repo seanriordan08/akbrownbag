@@ -48,6 +48,8 @@ $(document).ready(function(){
     }
   });
 
+  $(".button_wrapper").click();
+
   $('li.nav').on("click", function(){
     var selection = $(this).text();
 
